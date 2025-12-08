@@ -62,7 +62,6 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* Navbar Center: Desktop Menu */}
                     <div className="hidden lg:flex">
                         <ul className="menu menu-horizontal gap-6 font-bold text-lg">
                             <li><NavLink to='/'>Home</NavLink></li>
