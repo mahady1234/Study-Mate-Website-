@@ -71,7 +71,6 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    {/* Navbar End: User Profile + Login/Logout */}
                     <div className="flex items-center gap-3">
                         {user ? (
                             <div className="dropdown dropdown-end">
