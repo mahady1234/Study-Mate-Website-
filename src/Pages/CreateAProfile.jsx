@@ -35,7 +35,7 @@ const CreateProfile = () => {
                 skills: formData.skills.split(",").map(s => s.trim()),
             };
 
-            await axios.post("http://localhost:3000/partners", submitData);
+            await axios.post("https://study-mate-server-eta.vercel.app/partners", submitData);
             toast.success("Profile created successfully!");
             setFormData(initialState);
         } catch (error) {

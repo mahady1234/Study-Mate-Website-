@@ -11,7 +11,7 @@ const FindPartners = () => {
     useEffect(() => {
         const fetchPartners = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/partners"); 
+                const response = await axios.get("https://study-mate-server-eta.vercel.app/partners");
                 setPartners(response.data);
             } catch (error) {
                 console.error("Error fetching partners:", error);

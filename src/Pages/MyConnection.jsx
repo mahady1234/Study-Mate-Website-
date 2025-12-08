@@ -19,7 +19,7 @@ const MyConnections = () => {
 
         const fetchRequests = async () => {
             try {
-                const res = await axios.get(`http://localhost:3000/requests?userEmail=${user.email}`);
+                const res = await axios.get(`https://study-mate-server-eta.vercel.app/requests?userEmail=${user.email}`);
                 setRequests(res.data);
             } catch (err) {
                 console.error(err);
@@ -33,7 +33,7 @@ const MyConnections = () => {
     const handleDelete = async (id) => {
         if (!window.confirm("Are you sure?")) return;
         try {
-            await axios.delete(`http://localhost:3000/requests/${id}`);
+            await axios.delete(`https://study-mate-server-eta.vercel.app/requests/${id}`);
             setRequests(prev => prev.filter(r => r._id !== id));
             toast.success("Deleted successfully");
         } catch (err) {
@@ -64,7 +64,7 @@ const MyConnections = () => {
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:3000/requests/${selectedRequest._id}`, formData);
+            await axios.put(`https://study-mate-server-eta.vercel.app/requests/${selectedRequest._id}`, formData);
             setRequests(prev =>
                 prev.map(r => r._id === selectedRequest._id ? { ...r, ...formData } : r)
             );

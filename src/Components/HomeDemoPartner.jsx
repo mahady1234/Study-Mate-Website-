@@ -10,7 +10,7 @@ const HomeDemoPartner = () => {
     const { user } = use(AuthContext);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/partners')
+        axios.get('https://study-mate-server-eta.vercel.app/partners')
             .then(res => {
                 const sorted = res.data
                     .sort((a, b) => b.rating - a.rating)

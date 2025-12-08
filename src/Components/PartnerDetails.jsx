@@ -17,7 +17,7 @@ const PartnerDetails = () => {
             navigate("/authRoot/login");
             return;
         }
-        axios.get(`http://localhost:3000/partners/${id}`)
+        axios.get(`https://study-mate-server-eta.vercel.app/partners/${id}`)
             .then(res => setPartner(res.data))
             .catch(err => console.log(err));
     }, [id, user, navigate]);
@@ -29,7 +29,7 @@ const PartnerDetails = () => {
         }
         setLoading(true);
         try {
-            await axios.post(`http://localhost:3000/partners/${id}/request`, { userEmail: user.email });
+            await axios.post(`https://study-mate-server-eta.vercel.app/partners/${id}/request`, { userEmail: user.email });
 
             setPartner(prev => ({ ...prev, partnerCount: (prev.partnerCount || 0) + 1 }));
 
