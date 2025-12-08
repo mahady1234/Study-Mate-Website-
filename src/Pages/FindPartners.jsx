@@ -8,11 +8,10 @@ const FindPartners = () => {
     const [sortField, setSortField] = useState("name");
     const navigate = useNavigate();
 
-    // Fetch all partners from backend
     useEffect(() => {
         const fetchPartners = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/partners"); // আপনার server port অনুযায়ী ঠিক করুন
+                const response = await axios.get("http://localhost:3000/partners"); 
                 setPartners(response.data);
             } catch (error) {
                 console.error("Error fetching partners:", error);
@@ -22,12 +21,10 @@ const FindPartners = () => {
         fetchPartners();
     }, []);
 
-    // Handle view profile button
     const handleViewProfile = (id) => {
         navigate(`/details/${id}`);
     };
 
-    // Filter and sort partners dynamically
     const displayedPartners = partners
         .filter(p =>
             p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -35,7 +32,6 @@ const FindPartners = () => {
         )
         .sort((a, b) => {
             if (sortField === "experienceLevel") {
-                // Custom order: Beginner < Intermediate < Expert
                 const order = { "Beginner": 1, "Intermediate": 2, "Expert": 3 };
                 return order[a.experienceLevel] - order[b.experienceLevel];
             }
@@ -46,7 +42,6 @@ const FindPartners = () => {
         <div className="max-w-6xl mx-auto p-6 mt-30">
             <h1 className="text-3xl font-bold mb-6 text-center">Find Study Partners</h1>
 
-            {/* Search & Sort Controls */}
             <div className="flex flex-col md:flex-row justify-between mb-6 gap-4">
                 <input
                     type="text"
@@ -67,7 +62,6 @@ const FindPartners = () => {
                 </select>
             </div>
 
-            {/* Partner Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {displayedPartners.map(partner => (
                     <div key={partner._id} className="border rounded-lg p-4 shadow hover:shadow-lg transition">
