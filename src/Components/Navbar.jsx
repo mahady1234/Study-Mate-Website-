@@ -29,7 +29,6 @@ const Navbar = () => {
                 <div className="flex items-center justify-between">
 
                     <div className="flex items-center gap-2">
-                        {/* Mobile Hamburger */}
                         <div className="lg:hidden dropdown">
                             <label tabIndex={0} className="btn btn-ghost p-2">
                                 <svg
