@@ -47,7 +47,6 @@ const PartnerDetails = () => {
     return (
         <div className="min-h-screen bg-gray-50 py-10 px-4">
             <div className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg relative z-10">
-                {/* Profile */}
                 <div className="flex flex-col items-center">
                     <img
                         src={partner.profileimage}
