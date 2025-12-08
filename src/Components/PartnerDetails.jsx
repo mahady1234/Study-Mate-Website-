@@ -29,10 +29,8 @@ const PartnerDetails = () => {
         }
         setLoading(true);
         try {
-            // Send request & increment partnerCount in DB
             await axios.post(`http://localhost:3000/partners/${id}/request`, { userEmail: user.email });
 
-            // UI locally update
             setPartner(prev => ({ ...prev, partnerCount: (prev.partnerCount || 0) + 1 }));
 
             toast.success("Partner request sent!");
