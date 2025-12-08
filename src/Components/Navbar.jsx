@@ -52,7 +52,6 @@ const Navbar = () => {
                             </ul>
                         </div>
 
-                        {/* Logo */}
                         <Link to='/' className='flex items-center gap-1'>
                             <img
                                 className='w-10 h-10 bg-white p-1 rounded-full object-cover transition-transform duration-500 hover:scale-110'
