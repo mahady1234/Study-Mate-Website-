@@ -57,7 +57,6 @@ const PartnerDetails = () => {
                     <p className="text-gray-500 mt-1">{partner.subject} ({partner.studyMode})</p>
                 </div>
 
-                {/* Details Grid */}
                 <div className="mt-8 grid md:grid-cols-2 gap-6 text-gray-800">
                     <div className="border p-5 rounded-xl flex items-center gap-2">
                         <FaUser className="text-blue-500" />
@@ -77,7 +76,6 @@ const PartnerDetails = () => {
                     </div>
                 </div>
 
-                {/* Rating */}
                 {partner.rating && (
                     <div className="flex justify-center items-center gap-2 mt-6 text-gray-800">
                         <FaStar className="text-yellow-400 text-xl" />
@@ -85,7 +83,6 @@ const PartnerDetails = () => {
                     </div>
                 )}
 
-                {/* Buttons */}
                 <div className="mt-8 flex justify-center gap-4">
                     <button
                         onClick={handleRequest}
@@ -103,7 +100,6 @@ const PartnerDetails = () => {
                 </div>
             </div>
 
-            {/* Optional background blur */}
             <div className="fixed inset-0 backdrop-blur-sm bg-black/10 z-0"></div>
         </div>
     );
