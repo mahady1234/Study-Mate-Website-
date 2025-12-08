@@ -61,17 +61,19 @@ const router = createBrowserRouter([
     {
         path: '*',
         element: (
-            <div className="flex flex-col justify-center items-center min-h-screen">
+            <div className="flex flex-col justify-center items-center min-h-screen bg-gray-900 text-gray-200">
                 <img
                     src="https://media.istockphoto.com/id/2207745244/photo/modern-cybersecurity-visualization-depicting-a-digital-network-threat-alert.webp?a=1&b=1&s=612x612&w=0&k=20&c=3paiBm6FZL28WXjk5EpTCY4CQ-uKR_8Io6o5vwmjFI4="
                     alt="404 Error"
                     className="w-6/12 max-w-md mb-6 rounded-lg shadow-lg"
                 />
-                <h1 className="text-3xl font-bold mb-2 text-gray-700">Page Not Found</h1>
-                <p className="text-gray-500 mb-4">Sorry, the page you are looking for does not exist.</p>
+                <h1 className="text-3xl font-bold mb-2">Page Not Found</h1>
+                <p className="text-gray-400 mb-4">
+                    Sorry, the page you are looking for does not exist.
+                </p>
                 <a
                     href="/"
-                    className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+                    className="px-6 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition"
                 >
                     Go to Home
                 </a>
