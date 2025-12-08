@@ -28,7 +28,6 @@ const Navbar = () => {
             <MyContainer>
                 <div className="flex items-center justify-between">
 
-                    {/* Navbar Start: Logo + Mobile Dropdown */}
                     <div className="flex items-center gap-2">
                         {/* Mobile Hamburger */}
                         <div className="lg:hidden dropdown">
