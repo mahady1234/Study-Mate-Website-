@@ -44,30 +44,30 @@ const Profile = () => {
 
     return (
         <MyContainer>
-            <div className="max-w-md mx-auto mt-24 bg-white p-6 rounded-lg shadow-lg">
+            <div className="max-w-md mx-auto mt-24  p-6 rounded-lg shadow-lg">
                 <div className="flex flex-col items-center gap-4">
                     <img
                         src={user.photoURL || "https://img.icons8.com/?size=128&id=Ib9FADThtmSf&format=png"}
                         alt={user.displayName || "User"}
-                        className="w-24 h-24 rounded-full border-4 border-blue-300 object-cover"
+                        className="w-24 h-24 rounded-full border-4 border-blue-900 object-cover"
                     />
                     <h2 className="text-xl font-bold">{user.displayName || "No Name"}</h2>
-                    <p className="text-gray-600">{user.email}</p>
+                    <p className="">{user.email}</p>
 
                     <div className="flex flex-col gap-3 w-full mt-4">
                         <button
                             onClick={() => setEditMode(!editMode)}
-                            className="btn btn-outline btn-primary w-full"
+                            className="btn btn-outline  w-full"
                         >
                             {editMode ? "Cancel" : "Update Profile"}
                         </button>
                         <button
                             onClick={handleLogout}
-                            className="btn bg-red-500 text-white w-full"
+                            className="btn bg-red-700 text-white w-full"
                         >
                             Logout
                         </button>
-                        <Link to="/" className="btn bg-blue-500 text-white w-full">
+                        <Link to="/" className="btn bg-blue-900 text-white w-full">
                             Back To Home
                         </Link>
                     </div>

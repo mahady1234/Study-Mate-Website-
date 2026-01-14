@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
-    <ToastContainer />
-    <Toaster position="top-right" reverseOrder={false} />
+    <ToastContainer theme="colored" />
+    <Toaster position="top-right" theme="colored"  reverseOrder={false} />
   </StrictMode>
 )

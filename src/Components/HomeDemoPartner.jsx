@@ -14,7 +14,7 @@ const HomeDemoPartner = () => {
             .then(res => {
                 const sorted = res.data
                     .sort((a, b) => b.rating - a.rating)
-                    .slice(0, 3);
+                    .slice(0, 4);
                 setPartners(sorted);
             })
             .catch(err => console.log(err));
@@ -34,7 +34,7 @@ const HomeDemoPartner = () => {
                 Top Study Partners
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-4 gap-8">
                 {partners.map((partner, index) => (
                     <div
                         key={partner._id}
@@ -57,7 +57,7 @@ const HomeDemoPartner = () => {
                             {partner.name}
                         </h3>
 
-                        <p className="text-center mt-2 text-base-content/70">
+                        <p className="text-center h-15 mt-2 text-base-content/70">
                             {partner.subject} • {partner.skill}
                         </p>
 
@@ -70,7 +70,7 @@ const HomeDemoPartner = () => {
 
                         <button
                             onClick={() => handleViewProfile(partner._id)}
-                            className="w-full mt-6 py-2 rounded-xl bg-primary text-primary-content font-medium 
+                            className="w-full mt-6 py-2 rounded-xl bg-blue-900 text-primary-content font-medium 
                             hover:opacity-90 transition duration-300"
                         >
                             View Profile
