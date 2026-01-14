@@ -56,13 +56,16 @@ const FindPartners = () => {
                     onChange={e => setSortField(e.target.value)}
                     className="border rounded px-3 py-2"
                 >
-                    <option value="name">Sort by Name</option>
-                    <option value="subject">Sort by Subject</option>
-                    <option value="experienceLevel">Sort by Experience Level</option>
+                    <option value="name" className="text-white  dark:bg-gray-900">Sort by Name</option>
+                    <option value="subject" className="text-white dark:bg-gray-900">Sort by Subject</option>
+                    <option value="experienceLevel" className="text-white dark:bg-gray-900">Sort by Experience Level</option>
                 </select>
+
+
+
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                 {displayedPartners.map(partner => (
                     <div key={partner._id} className="border rounded-lg p-4 shadow hover:shadow-lg transition">
                         <img
@@ -70,13 +73,13 @@ const FindPartners = () => {
                             alt={partner.name}
                             className="w-24 h-24 rounded-full mx-auto mb-4"
                         />
-                        <h2 className="text-xl font-semibold text-center mb-2">{partner.name}</h2>
+                        <h2 className="text-lg font-semibold h-12 text-center mb-2">{partner.name}</h2>
                         <p className="text-center mb-1"><strong>Subject:</strong> {partner.subject}</p>
                         <p className="text-center mb-1"><strong>Mode:</strong> {partner.studyMode}</p>
                         <p className="text-center mb-3"><strong>Experience:</strong> {partner.experienceLevel}</p>
                         <button
                             onClick={() => handleViewProfile(partner._id)}
-                            className="block w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+                            className="block w-full bg-blue-900 text-white py-2 rounded hover:bg-blue-900 transition"
                         >
                             View Profile
                         </button>
@@ -92,3 +95,8 @@ const FindPartners = () => {
 };
 
 export default FindPartners;
+
+
+
+
+

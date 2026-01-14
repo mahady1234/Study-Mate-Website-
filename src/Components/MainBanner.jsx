@@ -36,7 +36,7 @@ const ImageCarousel = () => {
             {slides.map((slide, index) => (
                 <div
                     key={slide.id}
-                    className={`absolute w-11/12 sm:w-8/12 h-2/3 sm:h-3/4 rounded-xl shadow-2xl shadow-blue-700 transition-opacity duration-1000 flex flex-col justify-start items-center text-center
+                    className={`absolute w-11/12 sm:w-8/12 h-2/3 sm:h-3/4 rounded-xl shadow-2xl shadow-blue-700 transition-opacity   duration-1000 flex flex-col justify-start items-center text-center
                         ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}
                     style={{
                         backgroundImage: `url(${slide.image})`,
@@ -47,7 +47,7 @@ const ImageCarousel = () => {
                     <div className={`mt-6 sm:mt-8 px-4 sm:px-0 transition-all duration-700 transform
                         ${index === current ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}`}
                     >
-                        <h2 className="text-2xl sm:text-4xl font-bold mb-2 text-white drop-shadow-md">{slide.title}</h2>
+                        <h2 className="text-2xl sm:text-4xl  font-bold mb-2 text-white  drop-shadow-md">{slide.title}</h2>
                         <p className="text-sm sm:text-lg text-white drop-shadow-md">{slide.description}</p>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ const ImageCarousel = () => {
                     <button
                         key={index}
                         onClick={() => setCurrent(index)}
-                        className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-colors ${index === current ? "bg-blue-500" : "bg-gray-400"}`}
+                        className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full  transition-colors ${index === current ? "bg-blue-500" : "bg-gray-400"}`}
                     />
                 ))}
             </div>

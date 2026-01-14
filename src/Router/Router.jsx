@@ -10,6 +10,12 @@ import PrivateRoute from "../Auth/PrivateRoute";
 import FindPartners from "../Pages/FindPartners";
 import CreateProfile from "../Pages/CreateAProfile";
 import MyConnections from "../Pages/MyConnection";
+import About from "../Components/About";
+import Policy from "../Components/Policy";
+import DashboardLayout from "../DashboardLayout/DashboardLayout";
+import DashboardHome from "../Components/DashboardHome";
+import Profile from "../Pages/ProfilePage";
+import AllUser from "../Components/AllUser";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +29,14 @@ const router = createBrowserRouter([
             {
                 path: 'profile',
                 element: <PrivateRoute><ProfilePage /></PrivateRoute>
+            },
+            {
+                path: 'about',
+                element: <About />
+            },
+            {
+                path: 'policy',
+                element: <Policy></Policy>
             },
             {
                 path: 'details/:id',
@@ -54,6 +68,25 @@ const router = createBrowserRouter([
                 path: 'myConnections',
                 element: <PrivateRoute><MyConnections></MyConnections></PrivateRoute>
             },
+        ]
+    },
+    {
+        path: '/dashBoard',
+        element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
+        children: [
+            {
+                index: true,
+                element: <PrivateRoute><DashboardHome /></PrivateRoute>
+            },
+
+            {
+                path: 'profile',
+                element: <PrivateRoute><Profile /></PrivateRoute>
+            },
+            {
+                path: 'allUser',
+                element: <AllUser />
+            }
         ]
     },
 
